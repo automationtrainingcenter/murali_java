@@ -130,6 +130,46 @@ public class DataTypesDemo {
 		System.out.println(il);
 		
 		
+		// boxing: converting primitive type to wrapper type
+		int ipr = 1234;
+		Integer iw = Integer.valueOf(ipr);
+		System.out.println(iw);
+		
+		float fpr = 9.8f;
+		Float fw = Float.valueOf(fpr);
+		System.out.println(fw);
+		
+		
+		
+		// unboxing: converting wrapper type to primitive type
+		Integer iwr = new Integer(987);
+		int ip = iwr.intValue();
+		System.out.println(ip);
+		
+		Double dw = new Double(123.98);
+		double dpr = dw.doubleValue();
+		System.out.println(dpr);
+		
+		// converting primitive to reference type (String)
+		int ipri = 12345;
+		String i2s = Integer.toString(ipri);
+		System.out.println(i2s+10);
+		
+		
+		float fpri = 3.14f;
+		String f2s = Float.toString(fpri);
+		System.out.println(f2s+10);
+		
+		// converting reference type (String) to primitive type
+		String si = "8769";
+		int s2i = Integer.parseInt(si);
+		System.out.println(s2i+10);
+		
+		String sd = "9.87";
+		double s2d = Double.parseDouble(sd);
+		System.out.println(s2d+10);
+		
+		
 	}
 
 }

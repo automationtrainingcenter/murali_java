@@ -147,7 +147,7 @@ public class Operators {
 		b = a--;
 		System.out.println("a : " + a + "\tb : " + b);
 		/*
-		 * pre decrement: a = --b > b = b-1 and a = b decrease right operand value by
+		 * pre decrement: a = --b > b = b-1 and a = b    decrease right operand value by
 		 * 1 and assign that value to left operand
 		 */
 		b = --a;

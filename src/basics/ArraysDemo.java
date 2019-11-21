@@ -59,21 +59,37 @@ public class ArraysDemo {
 		marks[5] = 16;
 
 		// retrieving data from an array
-		System.out.println(marks[0]);
-		System.out.println(marks[1]);
-		System.out.println(marks[2]);
-		System.out.println(marks[3]);
-		System.out.println(marks[4]);
-		System.out.println(marks[5]);
+//		System.out.println(marks[0]);
+//		System.out.println(marks[1]);
+//		System.out.println(marks[2]);
+//		System.out.println(marks[3]);
+//		System.out.println(marks[4]);
+//		System.out.println(marks[5]);
 
+		// retrieving data from an array using normal for loop
+//		for (int i = 0; i < marks.length; i++) {
+//			System.out.println(marks[i]);
+//		}
+
+		for(int mark : marks) {
+			System.out.println(mark);
+		}
+		
 		// initialization
 		char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
 
-		System.out.print(vowels[0] + "\t");
-		System.out.print(vowels[1] + "\t");
-		System.out.print(vowels[2] + "\t");
-		System.out.print(vowels[3] + "\t");
-		System.out.println(vowels[4]);
+//		System.out.print(vowels[0] + "\t");
+//		System.out.print(vowels[1] + "\t");
+//		System.out.print(vowels[2] + "\t");
+//		System.out.print(vowels[3] + "\t");
+//		System.out.print(vowels[4] + "\t");
+//		System.out.println();
+
+		// retrieving data from an array using a for each loop
+		for (char vowel : vowels) {
+			System.out.print(vowel + "\t");
+		}
+		System.out.println();
 
 		// find the number of values in an array
 		System.out.println(vowels.length);
@@ -128,28 +144,28 @@ public class ArraysDemo {
 		// 2D array represents 1 row and these can have unequal number of columns also
 		// unequal number of columns in 2D array
 		int[][] m3 = { { 1, 4, 8 }, { 9, 7, 3, 5 }, { 1, 0, 4, 2, 7 } };
-		
-		System.out.println("number of rows in m3 "+m3.length);
-		
-		System.out.println("number of columns in 1st row"+m3[0].length);
-		System.out.println("number of columns in 2nd row"+m3[1].length);
-		System.out.println("number of columns in 3rd row"+m3[2].length);
-		
-		System.out.print(m3[0][0]+" ");
-		System.out.print(m3[0][1]+" ");
-		System.out.print(m3[0][2]+"\n");
-		//****************************************
-		System.out.print(m3[1][0]+" ");
-		System.out.print(m3[1][1]+" ");
-		System.out.print(m3[1][2]+" ");
-		System.out.print(m3[1][3]+"\n");
-		//****************************************
-		System.out.print(m3[2][0]+" ");
-		System.out.print(m3[2][1]+" ");
-		System.out.print(m3[2][2]+" ");
-		System.out.print(m3[2][3]+" ");
-		System.out.print(m3[2][4]+"\n");
-		
+
+		System.out.println("number of rows in m3 " + m3.length);
+
+		System.out.println("number of columns in 1st row" + m3[0].length);
+		System.out.println("number of columns in 2nd row" + m3[1].length);
+		System.out.println("number of columns in 3rd row" + m3[2].length);
+
+		System.out.print(m3[0][0] + " ");
+		System.out.print(m3[0][1] + " ");
+		System.out.print(m3[0][2] + "\n");
+		// ****************************************
+		System.out.print(m3[1][0] + " ");
+		System.out.print(m3[1][1] + " ");
+		System.out.print(m3[1][2] + " ");
+		System.out.print(m3[1][3] + "\n");
+		// ****************************************
+		System.out.print(m3[2][0] + " ");
+		System.out.print(m3[2][1] + " ");
+		System.out.print(m3[2][2] + " ");
+		System.out.print(m3[2][3] + " ");
+		System.out.print(m3[2][4] + "\n");
+
 	}
 
 }

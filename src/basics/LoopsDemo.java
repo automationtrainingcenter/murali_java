@@ -48,7 +48,45 @@ package basics;
 * we can skip the current iteration of the loop based on some condition using "continue" statement
 */
 
-
 public class LoopsDemo {
+	public static void main(String[] args) {
+		// while loop
+		// print numbers from 1 to 10
+		// initialization
+		int i = 1;
+		// condition
+		while (i < 11) {
+			System.out.println(i);
+			// increment
+			i++;
+		}
 
+		// do while loop
+		System.out.println("************************************************");
+		// print numbers from 20 to 10
+		// initialization
+		int j = 20;
+		do {
+			System.out.println(j);
+			// decrement
+			j--;
+		} while (j > 10);
+
+		// for loop
+		System.out.println("************************************************");
+		// print even number from 100 to 110
+		for (int k = 100; k < 110; k++) {
+			if (k % 2 == 0) {
+				System.out.println(k);
+			}
+		}
+
+		// for each loop
+		System.out.println("************************************************");
+		int[] numbers = { 1, 3, 5, 7, 9, 11, 13, 17, 19 };
+		for (int number : numbers) {
+			System.out.println(number);
+		}
+
+	}
 }

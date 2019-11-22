@@ -71,10 +71,10 @@ public class ArraysDemo {
 //			System.out.println(marks[i]);
 //		}
 
-		for(int mark : marks) {
+		for (int mark : marks) {
 			System.out.println(mark);
 		}
-		
+
 		// initialization
 		char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
 

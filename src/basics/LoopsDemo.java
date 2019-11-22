@@ -1,4 +1,7 @@
 package basics;
+
+import java.util.Scanner;
+
 /*
 * If we want to execute a block of code for certain number of times then 
 * we are going to use loops
@@ -88,5 +91,61 @@ public class LoopsDemo {
 			System.out.println(number);
 		}
 
+		// do-while: read a string from the console until we enter exit
+		// create a Scanner class object to read the data
+		Scanner sc = new Scanner(System.in);
+		String word = "";
+		do {
+			System.out.println("enter some word");
+			word = sc.next();
+		} while (!word.equalsIgnoreCase("exit"));
+
+		System.out.println("************************************************");
+		// break statement: it will terminate the loop
+		for (int l = 0; l <= 10; l++) {
+			if (l == 5) {
+				break;
+			}
+			System.out.println(l);
+		}
+
+		System.out.println("for loop with break statement ended");
+
+		System.out.println("************************************************");
+		// continue statement: it will skip the current iteration
+		for (int l = 0; l <= 10; l++) {
+			if (l % 2 != 0) {
+				continue;
+			}
+			System.out.println(l);
+		}
+
+		System.out.println("for loop with continue statement ended");
+
+		// find out given number is prime number or not
+		boolean status = true;
+		System.out.println("enter a number to verify prime or not");
+		int num = sc.nextInt();
+		for (int p = 2; p <= num / 2; p++) {
+			if (num % p == 0) {
+				status = false;
+				break;
+			}
+		}
+		if (status) {
+			System.out.println("given number is prime");
+		} else {
+			System.out.println("given number is not prime");
+		}
+
+		// write a program to reverse the given number
+		int temp = 0;
+		while (num != 0) {
+			int r = num % 10;
+			num = num / 10;
+			temp = temp * 10 + r;
+		}
+
+		System.out.println("reverse of given number is " + temp);
 	}
 }

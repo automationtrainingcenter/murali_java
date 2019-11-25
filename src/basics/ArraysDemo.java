@@ -114,31 +114,53 @@ public class ArraysDemo {
 
 		// retrieve the data and print on the console
 		// first row data
-		System.out.print(m1[0][0] + " ");
-		System.out.print(m1[0][1] + " ");
-		System.out.print(m1[0][2] + "\n");
-		// second row data
-		System.out.print(m1[1][0] + " ");
-		System.out.print(m1[1][1] + " ");
-		System.out.print(m1[1][2] + "\n");
-		// third row
-		System.out.print(m1[2][0] + " ");
-		System.out.print(m1[2][1] + " ");
-		System.out.print(m1[2][2] + "\n");
+//		System.out.print(m1[0][0] + " ");
+//		System.out.print(m1[0][1] + " ");
+//		System.out.print(m1[0][2] + "\n");
+//		// second row data
+//		System.out.print(m1[1][0] + " ");
+//		System.out.print(m1[1][1] + " ");
+//		System.out.print(m1[1][2] + "\n");
+//		// third row
+//		System.out.print(m1[2][0] + " ");
+//		System.out.print(m1[2][1] + " ");
+//		System.out.print(m1[2][2] + "\n");
+		for (int i = 0; i < m1.length; i++) {
+			// outer loop represents rows in 2D array
+			for (int j = 0; j < m1[i].length; j++) {
+				// inner loop represents columns in every row of the 2D array
+				System.out.print(m1[i][j] + "  ");
+			}
+			System.out.println();
+		}
 
 		// Initialization
 		int[][] m2 = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } };
 
 		// Retrieve the data
-		System.out.print(m2[0][0] + "\t");
-		System.out.print(m2[0][1] + "\t");
-		System.out.print(m2[0][2] + "\n");
-		System.out.print(m2[1][0] + "\t");
-		System.out.print(m2[1][1] + "\t");
-		System.out.print(m2[1][2] + "\n");
-		System.out.print(m2[2][0] + "\t");
-		System.out.print(m2[2][1] + "\t");
-		System.out.print(m2[2][2] + "\n");
+//		System.out.print(m2[0][0] + "\t");
+//		System.out.print(m2[0][1] + "\t");
+//		System.out.print(m2[0][2] + "\n");
+//		System.out.print(m2[1][0] + "\t");
+//		System.out.print(m2[1][1] + "\t");
+//		System.out.print(m2[1][2] + "\n");
+//		System.out.print(m2[2][0] + "\t");
+//		System.out.print(m2[2][1] + "\t");
+//		System.out.print(m2[2][2] + "\n");
+//		for (int i = 0; i < m2.length; i++) {
+//			for (int j = 0; j < m2[i].length; j++) {
+//				System.out.print(m2[i][j]+" ");
+//			}
+//			System.out.println();
+//		}
+
+		// Retrieving data using inner for each loop
+		for (int[] row : m2) {
+			for(int column : row) {
+				System.out.print(column+"   ");
+			}
+			System.out.println();
+		}
 
 		// 2D array is nothing but an array of multiple 1D arrays and every 1D array in
 		// 2D array represents 1 row and these can have unequal number of columns also
@@ -151,20 +173,27 @@ public class ArraysDemo {
 		System.out.println("number of columns in 2nd row" + m3[1].length);
 		System.out.println("number of columns in 3rd row" + m3[2].length);
 
-		System.out.print(m3[0][0] + " ");
-		System.out.print(m3[0][1] + " ");
-		System.out.print(m3[0][2] + "\n");
-		// ****************************************
-		System.out.print(m3[1][0] + " ");
-		System.out.print(m3[1][1] + " ");
-		System.out.print(m3[1][2] + " ");
-		System.out.print(m3[1][3] + "\n");
-		// ****************************************
-		System.out.print(m3[2][0] + " ");
-		System.out.print(m3[2][1] + " ");
-		System.out.print(m3[2][2] + " ");
-		System.out.print(m3[2][3] + " ");
-		System.out.print(m3[2][4] + "\n");
+//		System.out.print(m3[0][0] + " ");
+//		System.out.print(m3[0][1] + " ");
+//		System.out.print(m3[0][2] + "\n");
+//		// ****************************************
+//		System.out.print(m3[1][0] + " ");
+//		System.out.print(m3[1][1] + " ");
+//		System.out.print(m3[1][2] + " ");
+//		System.out.print(m3[1][3] + "\n");
+//		// ****************************************
+//		System.out.print(m3[2][0] + " ");
+//		System.out.print(m3[2][1] + " ");
+//		System.out.print(m3[2][2] + " ");
+//		System.out.print(m3[2][3] + " ");
+//		System.out.print(m3[2][4] + "\n");
+		
+		for(int[] row : m3) {
+			for(int column : row) {
+				System.out.print(column + " ");
+			}
+			System.out.println();
+		}
 
 	}
 

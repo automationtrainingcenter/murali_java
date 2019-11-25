@@ -123,9 +123,9 @@ public class LoopsDemo {
 		System.out.println("for loop with continue statement ended");
 
 		// find out given number is prime number or not
-		boolean status = true;
 		System.out.println("enter a number to verify prime or not");
 		int num = sc.nextInt();
+		boolean status = true;
 		for (int p = 2; p <= num / 2; p++) {
 			if (num % p == 0) {
 				status = false;
@@ -147,5 +147,33 @@ public class LoopsDemo {
 		}
 
 		System.out.println("reverse of given number is " + temp);
+
+		// inner loops: inner loop is a loop inside another (outer) loop
+		/*
+		 * for every iteration of outer loop, inner loop will complete all it's
+		 * iterations
+		 */
+		// print prime numbers with in given range
+		for (int r = 10; r < 20; r++) {
+			boolean flag = true;
+			for (int p = 2; p <= r / 2; p++) {
+				if (r % p == 0) {
+					flag = false;
+					break; // inner loop
+				}
+			}
+			if (flag) {
+				System.out.println(r);
+			}
+		}
+
+		for (int o = 0; o < 3; o++) {
+			System.out.println("*******INNER LOOP STARTING**********");
+			for (int in = 0; in < 3; in++) {
+				System.out.println(o+" "+in);
+			}
+			System.out.println("*******INNER LOOP ENDED**********");
+		}
+		System.out.println("*******OUTER LOOP ENDED**********");
 	}
 }

@@ -1,5 +1,7 @@
 package abstraction;
 
+import abstraction.Outer.Inner;
+
 /*
  * Abstraction means a plan or template to create a class
  * Abstraction means hiding the implementation details of methods
@@ -66,6 +68,21 @@ public class AbstractionDemo {
 		InterfaceTwo i2 = (InterfaceTwo) i1;
 		i2.methodTwo();
 		i2.method();
+		
+		
+		// inner interface
+		Outer outObj = new OuterInnerImple();
+		outObj.outerMethod();
+		
+//		Inner inObj = new OuterInnerImple();
+//		Inner inObj = (Inner) outObj;
+//		inObj.innerMethod();
+		
+//		Inner inObj = outObj.method();
+//		inObj.innerMethod();
+		outObj.method().innerMethod(); // object chaining
+		
+	
 	} 
 
 }

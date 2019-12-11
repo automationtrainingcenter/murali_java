@@ -82,6 +82,13 @@ public class AbstractionDemo {
 //		inObj.innerMethod();
 		outObj.method().innerMethod(); // object chaining
 		
+		
+		// java 8 interface
+		Java8Interface.methodThree();
+		Java8Interface j8 = new Java8InterfaceImpl();
+		j8.methodOne();
+		j8.methodTwo();
+		
 	
 	} 
 

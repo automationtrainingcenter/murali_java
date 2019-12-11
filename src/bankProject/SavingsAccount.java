@@ -8,6 +8,7 @@ public class SavingsAccount extends BaseAccount{
 
 	public SavingsAccount(int accNum, String name, long phnum, int pin, double balance) {
 		super(accNum, name, phnum, pin, balance);
+		System.out.println("savings account created successfully");
 	}
 
 	@Override

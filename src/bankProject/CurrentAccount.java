@@ -9,6 +9,7 @@ public class CurrentAccount extends BaseAccount{
 
 	public CurrentAccount(int accNum, String name, long phnum, int pin, double balance) {
 		super(accNum, name, phnum, pin, balance);
+		System.out.println("current account created successfully");
 	}
 	
 	@Override

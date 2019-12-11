@@ -6,6 +6,7 @@ public class CreditAccount extends BaseAccount {
 
 	public CreditAccount(int accNum, String name, long phnum, int pin, double balance) {
 		super(accNum, name, phnum, pin, balance);
+		System.out.println("credit account created successfully");
 		// here balance means credit limit
 		this.cashLimit = this.balance * 0.3;
 		this.dueAmount = 0;

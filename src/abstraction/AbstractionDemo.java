@@ -43,53 +43,72 @@ import abstraction.Outer.Inner;
  * the abstract method of functional interface
  */
 public class AbstractionDemo {
-	
+
 	public static void main(String[] args) {
 		// abstract class
 		AbstractClassDemo acObj = new AbstractClassChild();
 		acObj.methodOne();
 		acObj.methodTwo();
-		
-		// interface 
+
+		// interface
 		MyInterfaceOne i1Obj = new MyInterfaceImpl();
 		i1Obj.methodOne();
 		i1Obj.methodTwo();
-		
+
 		// single class implementing multiple interfaces and also multiple inheritance
 		InterfaceOne i1 = new MultipleInterfaceImpl();
 		i1.methodOne();
 		i1.method();
-		
+
 //		InterfaceTwo i2 = new MultipleInterfaceImpl();
-		// we no need to create one more object of MutipleInterfaceImpl we can simply type
-		// cast InterfaceOne object reference to the InterfaceTwo object reference because
+		// we no need to create one more object of MutipleInterfaceImpl we can simply
+		// type
+		// cast InterfaceOne object reference to the InterfaceTwo object reference
+		// because
 		// both are implemented by same class
 //		MultipleInterfaceImpl i2 = (MultipleInterfaceImpl)i1;	
 		InterfaceTwo i2 = (InterfaceTwo) i1;
 		i2.methodTwo();
 		i2.method();
-		
-		
+
 		// inner interface
 		Outer outObj = new OuterInnerImple();
 		outObj.outerMethod();
-		
+
 //		Inner inObj = new OuterInnerImple();
 //		Inner inObj = (Inner) outObj;
 //		inObj.innerMethod();
-		
+
 //		Inner inObj = outObj.method();
 //		inObj.innerMethod();
 		outObj.method().innerMethod(); // object chaining
-		
-		
+
 		// java 8 interface
 		Java8Interface.methodThree();
 		Java8Interface j8 = new Java8InterfaceImpl();
 		j8.methodOne();
 		j8.methodTwo();
-		
-	
-	} 
+
+		// functional interface implementation using normal java class
+		FnInterfaceOne f1nor = new FnInterfaceOneImple();
+		f1nor.methodOne();
+
+		// functional interface implementation using anonymous class
+		FnInterfaceOne f1Anon = new FnInterfaceOne() {
+
+			@Override
+			public void methodOne() {
+				System.out.println("methodOne of FnInterfaceOne definition using ANONYMOUS class");
+			}
+		};
+
+		f1Anon.methodOne();
+
+		// functional interface implementation using lambda expression
+		FnInterfaceOne f1Lam = () -> System.out
+				.println("methodOne of FnInterfaceOne definition using LAMBDA Expression");
+
+		f1Lam.methodOne();
+	}
 
 }

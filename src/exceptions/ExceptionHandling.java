@@ -21,22 +21,25 @@ package exceptions;
  */
 
 public class ExceptionHandling {
-	
+	public static void method() throws InterruptedException {
+		Thread.sleep(3000);
+	}
+
 	public static void main(String[] args) {
 		System.out.println("launch browser");
 		try {
 			System.out.println("locate username field");
 			System.out.println("enter username");
+			method();
 			System.out.println("locate password field");
 			System.out.println("enter password");
 			System.out.println("locate login button");
 			System.out.println("click on login button");
-		}catch(Exception e) {
+		} catch (Exception e) {
 			System.out.println(e.getMessage());
-		}finally {
+		} finally {
 			System.out.println("closing browser");
 		}
 	}
-	
 
 }
